@@ -1,0 +1,23 @@
+{
+  "name": "cocoder",
+  "version": "1.0.0",
+  "description": "This is a collaborative online judge website. Author: Qingdong Cheng Email: Qingdong.Cheng#gmail.com",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd oj-server && npm install && node server.js && cd ../oj-client && npm install ng build && cd ../executor pip install -r requirements.txt && python executor_server.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QingdongCheng/cocoder.git"
+  },
+  "author": "Qingdong Cheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QingdongCheng/cocoder/issues"
+  },
+  "homepage": "https://github.com/QingdongCheng/cocoder#readme"
+}
