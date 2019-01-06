@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd ./oj-server && npm install && node server.js && cd ../oj-client && npm install ng build && cd ../executor pip install -r requirements.txt && python executor_server.py"
+    "start": "cd ./oj-server && npm install && node server.js && cd ../oj-client && npm install && ng build && cd ../executor && pip install -r requirements.txt && python executor_server.py"
   },
   "repository": {
     "type": "git",
