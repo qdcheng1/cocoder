@@ -1,3 +1,36 @@
-This is a collaborative online judge website.
+This project is a collaborative online judge website supporting collaborative code editing, compiling, and execution.
+This document gives details of the implementation of code editor and code execution.
+
+Click here to see the website. http://thecocoder.com
+
+Technology Stack
+
+Stack                   Technologies
+Frontend-client        Angular.js, Socket.io
+Frontend-server        Node.js, Socket.io, Redis, mongoDB
+Backend-EXECUTOR       Flask, Docker
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Author: Qingdong Cheng
 Email: Qingdong.Cheng#gmail.com
