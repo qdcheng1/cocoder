@@ -20,8 +20,6 @@ app.use(function (req, res) {
     res.sendFile("index.html", { root: path.join(__dirname, '../public/')});
 });
 
-//app.listen(port, () => console.log(`QBOJ app listening on port ${port}!`));
-
 var server = http.createServer(app);
 io.attach(server);
 server.listen(3000);

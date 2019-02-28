@@ -7,25 +7,25 @@ var jsonParser = bodyParser.json();
 var node_rest_client = require('node-rest-client').Client;
 var rest_client = new node_rest_client();
 
-//Should be in a config file, hardcoded here
+// Should be in a config file, hardcoded here
 EXECUTOR_SERVER_URL = 'http://localhost:5000/build_and_run';
-
+// register a remote method
 rest_client.registerMethod('build_and_run', EXECUTOR_SERVER_URL, 'POST');
-
-
+// GET /api/v1/problems
 router.get("/problems", function (req, res) {
   problemService.getProblems()
     .then(problems => res.json(problems));
 });
 
-
+// GET /api/v1/problems/:id
 router.get("/problems/:id", function (req, res) {
   var id = req.params.id;
   problemService.getProblem(+id)
     .then(problem => res.json(problem));
 });
 
-// post problem
+// Create a new problem
+// POST /api/v1/problems
 router.post('/problems', jsonParser, (req, res) => {
     problemService.addProblem(req.body)
         .then(problem => {
@@ -35,7 +35,7 @@ router.post('/problems', jsonParser, (req, res) => {
         });
 });
 
-
+// build and run
 router.post("/build_and_run", jsonParser, function(req, res) {
   const userCode = req.body.user_code;
   const lang = req.body.lang;

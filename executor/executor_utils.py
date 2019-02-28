@@ -42,16 +42,18 @@ def load_image():
     print("Image:[%s] loaded" % IMAGE_NAME)
 
 def build_and_run(code, lang):
-    #docker operations
+    # docker operations
     result = {'build' : None, 'run': None, 'error' : None}
-
     source_file_parent_dir_name = uuid.uuid4()
+    # '/tmp/uuid/Example.java'
     source_file_host_dir = "%s/%s" % (TEMP_BUILD_DIR, source_file_parent_dir_name)
     source_file_guest_dir = "/test/%s" % (source_file_parent_dir_name)
     make_dir(source_file_host_dir)
-
+    # write code to a file
     with open("%s/%s" %(source_file_host_dir, SOURCE_FILE_NAMES[lang]), 'w') as source_file:
         source_file.write(code)
+
+    # build and run
     try:
         client.containers.run(
             image=IMAGE_NAME,
@@ -65,6 +67,8 @@ def build_and_run(code, lang):
         result['build'] = e.stderr
         shutil.rmtree(source_file_host_dir)
         return result
+
+    # run in the docker
     try:
         log = client.containers.run(
             image=IMAGE_NAME,
