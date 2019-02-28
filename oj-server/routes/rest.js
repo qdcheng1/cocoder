@@ -4,6 +4,7 @@ var problemService = require("../services/problemService");
 var bodyParser = require("body-parser");
 var jsonParser = bodyParser.json();
 
+// node-rest-client allows connecting to any API REST and get results as js Object
 var node_rest_client = require('node-rest-client').Client;
 var rest_client = new node_rest_client();
 
@@ -36,6 +37,9 @@ router.post('/problems', jsonParser, (req, res) => {
 });
 
 // build and run
+// send the request for user
+// use the node-rest-client
+
 router.post("/build_and_run", jsonParser, function(req, res) {
   const userCode = req.body.user_code;
   const lang = req.body.lang;
