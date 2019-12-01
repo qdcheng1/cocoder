@@ -85,10 +85,6 @@ Container Lightweight;              Quick to initialize;        Weaker OS isolat
 Virtual Machine                     Complete isolation;         Slow to initialize; 
  
 Container is an obvious winner if we want to support multiple languages and don’t worry about performance too much.  
- 
-
-
 
 
 Author: Qingdong Cheng
-Email: Qingdong.Cheng#gmail.com
