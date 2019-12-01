@@ -3,8 +3,6 @@ This document gives details of the implementation of code editor and code execut
 
 
 Technology Stack
-
-Stack                   Technologies
 Frontend-client        Angular.js, Socket.io
 Frontend-server        Node.js, Socket.io, Redis, mongoDB
 Backend-EXECUTOR       Flask, Docker
