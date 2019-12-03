@@ -1,12 +1,11 @@
 This project is a collaborative online judge website supporting collaborative code editing, compiling, and execution.
 This document gives details of the implementation of code editor and code execution.
 
-
-Technology | Stack
---- | ---
-Frontend-client | Angular.js, Socket.io
-Frontend-server | Node.js, Socket.io, Redis, mongoDB
-Backend-EXECUTOR | Flask, Docker
+|Technology | Stack|
+| --- | --- |
+| Frontend-client | Angular.js, Socket.io|
+| Frontend-server | Node.js, Socket.io, Redis, mongoDB |
+| Backend-EXECUTOR | Flask, Docker |
 
 
 1. User can use interactive code editor to edit code. Supported languages are Java and Python. 
