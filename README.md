@@ -22,13 +22,13 @@ This document gives details of the implementation of code editor and code execut
  
 
 
-Collaborative Editor 
+# Collaborative Editor 
 Use socket.io as the communication protocol between client and server. 
 * Client-server communication is heavy; 
 * Full-duplex asynchronous messaging is prefered; 
 * WebSockets pass through most firewalls without any reconfiguration. 
 
-Client-side Editor 
+# Client-side Editor 
 ACE Editor 
 A Javascript-based editor for browser and support source code editing. 
 It supports multiple languages, color themes, programing APIs for advanced usage. 
@@ -78,7 +78,7 @@ event_n+2 ...]}.
 This solution limits the size of event list, as well as keep the ability for rolling back.  
  
 
-User Code Executor 
+# User Code Executor 
 Users can submit their code through web UI.  
 For security reasons, we cannot execute user code directly on server.  
 We can utilize   
@@ -89,8 +89,8 @@ Here we compare pros /cons of different approaches:
  
 Options   |                           Pros            |               Cons 
 --- | --- | ---
-Language Specific Tool/Package | Small overhead;        |     Need configuration for each language; Need clean up work after the execution;. 
-Container Lightweight;      |        Quick to initialize;    |    Weaker OS isolation; 
-Virtual Machine             |        Complete isolation;      |  Slow to initialize; 
+Language Specific Tool/Package | Small overhead        |     Need configuration for each language; Need clean up work after the execution
+Container Lightweight      |        Quick to initialize    |    Weaker OS isolation
+Virtual Machine             |        Complete isolation      |  Slow to initialize
  
 Container is an obvious winner if we want to support multiple languages and don’t worry about performance too much.  
