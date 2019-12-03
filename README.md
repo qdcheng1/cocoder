@@ -88,7 +88,7 @@ We can utilize
 Here we compare pros /cons of different approaches: 
  
 Options   |                           Pros            |               Cons 
---- | ---
+--- | --- | ---
 Language Specific Tool/Package | Small overhead;        |     Need configuration for each language; 
                                                                 Need clean up work after the execution;. 
 Container Lightweight;      |        Quick to initialize;    |    Weaker OS isolation; 
