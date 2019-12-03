@@ -3,7 +3,7 @@ This document gives details of the implementation of code editor and code execut
 
 |Technology | Stack|
 | --- | --- |
-| Frontend-client | Angular.js, Socket.io|
+| Frontend-client | Angular.js, Socket.io |
 | Frontend-server | Node.js, Socket.io, Redis, mongoDB |
 | Backend-EXECUTOR | Flask, Docker |
 
