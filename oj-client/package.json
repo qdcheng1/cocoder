@@ -23,7 +23,7 @@
     "@types/auth0-js": "^8.11.7",
     "ace-builds": "^1.4.2",
     "angular2-jwt": "^0.2.3",
-    "auth0-js": "^9.8.2",
+    "auth0-js": "^9.13.2",
     "bootstrap": "^3.4.0",
     "core-js": "^2.5.4",
     "jquery": "^3.3.1",
