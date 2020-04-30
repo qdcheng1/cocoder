@@ -26,7 +26,7 @@
     "auth0-js": "^9.8.2",
     "bootstrap": "^3.4.0",
     "core-js": "^2.5.4",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "laravel-mix": "^4.0.0-beta.2",
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.26"
